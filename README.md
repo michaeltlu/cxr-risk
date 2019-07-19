@@ -1,4 +1,4 @@
-# CXR-risk: A CNN to predict 12-year mortality from chest radiographs
+# CXR-risk: A CNN to predict long-term mortality from chest radiographs
 
 
 Please watch this repository for future updates.
