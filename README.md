@@ -64,4 +64,4 @@ I thank the NCI and ACRIN for access to trial data, as well as the PLCO and NLST
 
 
 
-<b>Please watch this repository for updates (including CXR-Risk inference code and model weights) in 2020.</b>
+<b>Please watch this repository for CXR-Risk inference code and model weights in 2020.</b>
