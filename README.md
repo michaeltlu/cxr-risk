@@ -39,7 +39,7 @@ cd path_for_PLCO_pngs
 while IFS=, read -ra cols; do mogrify -rotate 90 "${cols[0]}"; done < /path_to_repo/preprocessing/plco_rotation_github.csv
 ```
 
-NLST radiographs were provided as DCM files by ACRIN. They were converted to TIF using DCMTK v3.6.1, then converted to PNGs with a maximum dimension of 512 pixels through ImageMagick:
+NLST radiographs were provided as DCM files by ACRIN. We chose to first convert them to TIF using DCMTK v3.6.1, then to PNGs with a maximum dimension of 512 pixels through ImageMagick to maintain consistency witht the PLCO radiographs:
 
 ```bash
 cd path_to_NLST_dcm
