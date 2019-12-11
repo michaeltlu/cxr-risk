@@ -64,5 +64,4 @@ I thank the NCI and ACRIN for access to trial data, as well as the PLCO and NLST
 
 
 
-Please watch this repository for future updates.
-
+Please watch this repository for updates (including CNN inference code and model weights) in 2020.
