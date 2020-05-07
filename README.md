@@ -28,7 +28,7 @@ The `data` folder provides the image filenames, split of PLCO into independent t
 
 
 ## Image processing
-PLCO radiographs were provided as scanned TIF files by the NCI. TIFs were converted to PNGs with a maximum dimension of 512 pixels with ImageMagick v6.8.9-9. 
+PLCO radiographs were provided as scanned TIF files by the NCI. TIFs were converted to PNGs with a minimum dimension of 512 pixels with ImageMagick v6.8.9-9. 
 
 Many of the PLCO radiographs were rotated 90 or more degrees. To address this, we developed a CNN to identify rotated radiographs. First, we trained a CNN using the resnet34 architecture to identify synthetically rotated radiographs from the [CXR14 dataset](http://openaccess.thecvf.com/content_cvpr_2017/papers/Wang_ChestX-ray8_Hospital-Scale_Chest_CVPR_2017_paper.pdf). We then fine tuned this CNN using 11,000 manually reviewed PLCO radiographs. The rotated radiographs identified by this CNN in `preprocessing/plco_rotation_github.csv` were then corrected using ImageMagick. 
 
@@ -39,7 +39,7 @@ cd path_for_PLCO_pngs
 while IFS=, read -ra cols; do mogrify -rotate 90 "${cols[0]}"; done < /path_to_repo/preprocessing/plco_rotation_github.csv
 ```
 
-NLST radiographs were provided as DCM files by ACRIN. We chose to first convert them to TIF using DCMTK v3.6.1, then to PNGs with a maximum dimension of 512 pixels through ImageMagick to maintain consistency with the PLCO radiographs:
+NLST radiographs were provided as DCM files by ACRIN. We chose to first convert them to TIF using DCMTK v3.6.1, then to PNGs with a minimum dimension of 512 pixels through ImageMagick to maintain consistency with the PLCO radiographs:
 
 ```bash
 cd path_to_NLST_dcm
