@@ -34,6 +34,8 @@ python3 cxr-risk_inference.py
 
 Dummy data files are provided in `development/dummy_dataset/dummy_dataset.csv` and `development/dummy_dataset/dummy_valid.csv`; dummy images are provided in the `development` and `test_images` folders. Weights for the CXR-Risk model are in `development/models/cxr-risk_v1.pth` 
 
+A Docker image will be released -- watch this repo for details.
+
 ## Datasets
 PLCO (NCT00047385) data used for model development and testing are available from the National Cancer Institute (NCI, https://biometry.nci.nih.gov/cdas/plco/). NLST (NCT01696968) testing data is available from the NCI (https://biometry.nci.nih.gov/cdas/nlst/) and the American College of Radiology Imaging Network (ACRIN, https://www.acrin.org/acrin-nlstbiorepository.aspx). Due to the terms of our data use agreement, I cannot distribute the original data. Please instead obtain the data directly from the NCI and ACRIN.
 
