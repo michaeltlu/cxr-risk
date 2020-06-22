@@ -18,6 +18,22 @@ The result is CXR-Risk, a CNN that predicts the risk of 12-year all-cause mortal
 
 This repo contains data intended to promote reproducible research. It is not for clinical care or commercial use. 
 
+## Installation
+This inference code was tested on Ubuntu 16.04 LTS, anaconda version 4.7.10, python 3.7.3, fastai 1.0.55, cuda 10.1, pytorch 1.0.1 and cadene pretrained models 0.7.4. A full list of dependencies is listed in `environment.yml`. 
+
+Inference can be run on the GPU or CPU, and should work with ~4GB of GPU or CPU RAM. For GPU inference, a CUDA 10 capable GPU is required.
+
+This example is best run in a conda environment:
+
+```bash
+cd location_of_repo
+conda env create -n cxrrisk -f environment.yml
+conda activate cxrrisk
+python3 cxr-risk_inference.py
+```
+
+Dummy data files are provided in `development/dummy_dataset/dummy_dataset.csv` and `development/dummy_dataset/dummy_valid.csv`; dummy images are provided in the `development` and `test_images` folders. Weights for the CXR-Risk model are in `development/models/cxr-risk_v1.pth` 
+
 ## Datasets
 PLCO (NCT00047385) data used for model development and testing are available from the National Cancer Institute (NCI, https://biometry.nci.nih.gov/cdas/plco/). NLST (NCT01696968) testing data is available from the NCI (https://biometry.nci.nih.gov/cdas/nlst/) and the American College of Radiology Imaging Network (ACRIN, https://www.acrin.org/acrin-nlstbiorepository.aspx). Due to the terms of our data use agreement, I cannot distribute the original data. Please instead obtain the data directly from the NCI and ACRIN.
 
